@@ -1,6 +1,4 @@
-FROM circleci/node:8.12
+FROM circleci/node:8.16
 
-RUN echo "deb http://http.debian.net/debian jessie-backports main" | sudo tee --append /etc/apt/sources.list
 RUN sudo apt-get update
-RUN sudo apt-get install -t jessie-backports openjdk-8-jdk
-
+RUN sudo apt-get install openjdk-8-jdk rsync
